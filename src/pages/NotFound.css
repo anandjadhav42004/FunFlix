@@ -1,0 +1,59 @@
+.notfound-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background: radial-gradient(circle, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.95) 100%), 
+              url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1080');
+  background-size: cover;
+  background-position: center;
+  gap: 20px;
+}
+
+.notfound-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.notfound-desc {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.notfound-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: var(--transition);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.notfound-btn:hover {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .notfound-title {
+    font-size: 2.2rem;
+  }
+  .notfound-desc {
+    font-size: 1rem;
+  }
+  .notfound-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}

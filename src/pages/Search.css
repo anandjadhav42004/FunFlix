@@ -1,0 +1,75 @@
+.search-page {
+  padding: 100px 4% 50px 4%;
+  min-height: 100vh;
+}
+
+.search-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
+.search-title span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px 12px;
+}
+
+/* Ensure Movie Cards inside search grid fit the cell width */
+.search-grid .movie-card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-right: 0;
+}
+
+.search-no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+  gap: 15px;
+}
+
+.search-no-results-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.search-no-results-suggestions {
+  color: var(--text-muted);
+  max-width: 450px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.search-no-results-suggestions ul {
+  list-style-position: inside;
+  margin-top: 10px;
+  text-align: left;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .search-page {
+    padding-top: 85px;
+  }
+  .search-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  .search-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px 8px;
+  }
+}

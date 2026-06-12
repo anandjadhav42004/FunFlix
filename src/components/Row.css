@@ -1,0 +1,92 @@
+.row {
+  margin-left: 4%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.row-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.row-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.row-posters {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 15px 0;
+  scroll-behavior: smooth;
+  gap: 8px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none; /* Hide scrollbars for a cleaner Netflix layout */
+}
+
+/* Scroll Arrow buttons */
+.row-arrow {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  width: 40px;
+  background-color: rgba(20, 20, 20, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none; /* Don't block clicks on movie cards when invisible */
+  transition: opacity 0.3s ease, background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.row-arrow.left {
+  left: -35px;
+}
+
+.row-arrow.right {
+  right: 5px;
+}
+
+.row:hover .row-arrow {
+  opacity: 1;
+  pointer-events: auto; /* Allow clicks when visible */
+}
+
+.row-arrow:hover {
+  background-color: rgba(20, 20, 20, 0.85);
+}
+
+.row-arrow:hover svg {
+  transform: scale(1.25);
+}
+
+.row-arrow svg {
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .row {
+    margin-left: 4%;
+  }
+  .row-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .row-arrow {
+    display: none; /* Rely on native touch scroll on mobile devices */
+  }
+  .row-posters {
+    padding: 10px 0;
+  }
+}
