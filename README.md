@@ -8,6 +8,8 @@
 [![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![TMDB](https://img.shields.io/badge/TMDB-API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white)](https://www.themoviedb.org)
 
+### 🔗 [Live Demo](https://funflix03.netlify.app)
+
 </div>
 
 ---
